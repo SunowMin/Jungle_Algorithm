@@ -1,6 +1,6 @@
 a,b = input().split()
-reverseA = ' '
-reverseB = ' '
+reverseA = ''
+reverseB = ''
 for i in a:
     reverseA = i + reverseA
 for j in b:
