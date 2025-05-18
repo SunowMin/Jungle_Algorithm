@@ -1,9 +1,5 @@
+import math
+
 n =  int(input())
 
-def fac(n):
-    if n > 0:
-        return n * fac(n-1)
-    else :
-        return 1
-    
-print(fac(n))
+print(math.factorial(n))
