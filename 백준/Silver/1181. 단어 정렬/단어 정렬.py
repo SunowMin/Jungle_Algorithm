@@ -1,8 +1,17 @@
+# 1. 정렬 기준 함수 정의
+def sort_key(word):
+    # 길이 우선, 길이 같으면 사전순 정렬
+    return (len(word), word)
+
+# 2. 단어 개수 입력
 n = int(input())
-words = {input().strip() for _ in range(n)}  # set으로 중복 제거
 
-# 정렬: (1) 길이 오름차순 → (2) 사전순
-sorted_words = sorted(words, key=lambda x: (len(x), x))
+# 3. 중복 제거하면서 단어 입력받기
+words = {input().strip() for _ in range(n)}
 
+# 4. 정렬 (일반 함수 사용)
+sorted_words = sorted(words, key=sort_key)
+
+# 5. 출력
 for word in sorted_words:
     print(word)
