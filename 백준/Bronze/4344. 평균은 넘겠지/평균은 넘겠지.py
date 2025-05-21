@@ -1,16 +1,20 @@
 c = int(input())
 
 for _ in range(c):
-    input_data = list(map(int, input().split()))
-    n = input_data[0]
-    scores = input_data[1:]
+    avg = 0
+    cnt = 0
 
-    average = sum(scores) / len(scores)
+    a = list(map(int, input().split()))
+    n = a[0]
+    scores = a[1:]
 
-    scoreSum = 0
-    for score in scores:
-        # 만약 평균보다 높은 사람이 있으면
-        if score > average:
-            scoreSum += 1
-    percent = "%.3f%%" % ((scoreSum / len(scores))*100)
-    print(percent)
+    avg = sum(scores)/n
+
+    for ch in scores:
+        if ch > avg:
+            cnt += 1
+
+    # print((cnt / len(scores)) * 100)
+    # print(f"{percent:.3f}%")
+    print(f"{(cnt / len(scores)) * 100:.3f}%")
+    # percent = "%.3f%%" % ((sum / len(li))*100)
