@@ -1,5 +1,5 @@
-t = int(input())
+n = int(input())
 
-for i in range (1, t+1):
+for i in range(n):
     a,b = map(int, input().split())
-    print(a+b, sep='\n')
+    print(a+b)
