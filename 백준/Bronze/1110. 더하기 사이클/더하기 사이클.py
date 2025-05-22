@@ -22,20 +22,9 @@ z = n
 cycle = 0
 
 # 주어진 수가 10보다 작다면 앞에 0을 붙여 두자리로 만들기
-# if int(n) == 0:
-#     print("1")
-# elif int(n) < 10:
-#     n = '0' + str(n)
-#     z = str(n)
-#     sum_cycle(str(n))
-# else:
-#     n=n
-#     sum_cycle(n)
-
 if int(n) < 10:
     n = '0' + str(n)
     z = str(n)
     sum_cycle(str(n))
 else:
-    n=n
     sum_cycle(n)
