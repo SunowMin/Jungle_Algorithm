@@ -1,30 +1,32 @@
-def sum_cycle(n):
-    global cycle
+import sys
+#sys.stdin = open("input.txt","r")
+def make(n):
+     
+    left_lst = list(str(n))
+    
+    left_lst = list(map(int, left_lst))
+    #print(left_lst)
+    if len(left_lst) == 1:
+        left_lst.insert(0,0)
+    
+    
+    # temp=left_lst
+    
+    return left_lst
+def cicle(ref,lst_prev,cnt):
+    
+  
+    n = lst_prev[0] + lst_prev[1]
+    if cnt != 0:
+        compare1 =(lst_prev[0]*10) +(lst_prev[1])
+        if compare1 == ref:
+            return cnt
+    cnt +=1
+    
+    #print(compare1)
+    lst_next =make(n)
+    cnt = cicle(ref,[lst_prev[1],lst_next[1]],cnt)
+    return cnt
+n = int(sys.stdin.readline())
 
-    # a는 10의 자리 수
-    # b는 1의 자리 수
-    # c는 a+b
-    a = n[0]
-    b = n[-1]
-    c = str(int(a) + int(b))
-
-    # 새로운 수 생성
-    s = b+c[-1]
-    cycle += 1
-
-    if s == z:
-        print(cycle)
-    else :
-        sum_cycle(s)
-
-n = input()
-z = n
-cycle = 0
-
-# 주어진 수가 10보다 작다면 앞에 0을 붙여 두자리로 만들기
-if int(n) < 10:
-    n = '0' + str(n)
-    z = str(n)
-    sum_cycle(str(n))
-else:
-    sum_cycle(n)
+print(cicle(n,make(n),0))
