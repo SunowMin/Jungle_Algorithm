@@ -28,6 +28,6 @@ for _ in range(test):
         else:  # priority_max <= queue[0][1]
             queue.pop(0)
             priority_list.pop(0)
-            if priority_list:  # 남은 우선순위가 있을 때만 갱신
+            if priority_list:
                 priority_max = priority_list[0]
             cnt += 1
