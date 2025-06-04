@@ -1,5 +1,4 @@
 import sys
-sys.setrecursionlimit(10000)  # 깊은 재귀 방지용 (50x50까지 커버)
 
 # 입력 받기
 n, m = map(int, input().split())
